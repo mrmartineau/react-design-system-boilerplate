@@ -1,13 +1,17 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
+# Dependencies
 node_modules
 
+# Build / dist
 build
 
-# yalc
+# Yalc
 .yalc
 yalc.lock
+
+# Rollup Plugin Typescript 2
+.rpt2_cache
 
 # misc
 .DS_Store
@@ -15,12 +19,11 @@ yalc.lock
 .env.development.local
 .env.test.local
 .env.production.local
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vscode
 .idea
 
-#Jest TestComponent Results
+# Jest TestComponent Results
 test-results
