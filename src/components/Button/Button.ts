@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { space } from 'styled-system'
+import { space, SpaceProps } from 'styled-system'
 
-export const Button = styled.button`
+export const Button = styled.button<SpaceProps>`
   background-color: #fff;
   border: 1px solid #ddd;
   font-weight: bold;

@@ -5,13 +5,14 @@ node_modules
 
 # Build / dist
 build
+.rpt2_cache
 
 # Yalc
 .yalc
 yalc.lock
 
-# Rollup Plugin Typescript 2
-.rpt2_cache
+# Tests
+coverage
 
 # misc
 .DS_Store

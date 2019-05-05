@@ -1,4 +1,4 @@
-import colorPalette, { primary, secondary } from './colorPalette'
+import { colorPalette, primary, secondary } from './colorPalette'
 import DesignSystem from 'design-system-utils'
 import { MySystem } from './tokens.models'
 
@@ -7,12 +7,12 @@ const fontFamily = {
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans"',
   sans: '"Effra","Helvetica Neue", Helvetica, Arial, sans-serif',
   serif: 'Georgia, "Times New Roman", Times, serif',
-  mono: 'Menlo, Monaco, "Courier New", monospace'
+  mono: 'Menlo, Monaco, "Courier New", monospace',
 }
 
 const motion = {
   duration: '300ms',
-  easing: 'cubic-bezier(0.77, 0, 0.175, 1)'
+  easing: 'cubic-bezier(0.77, 0, 0.175, 1)',
 }
 
 export const scale: number[] = [0, 8, 16, 24, 32, 40, 48, 56, 64]
@@ -30,7 +30,7 @@ export const designTokens: MySystem = {
       l: '24px', // h4
       xl: '30px', // h3
       xxl: '40px', // h2
-      xxxl: '48px' // h1
+      xxxl: '48px', // h1
     },
 
     fontFamily,
@@ -39,7 +39,7 @@ export const designTokens: MySystem = {
 
     lineHeight: {
       base: 1.4,
-      headings: 1.1
+      headings: 1.1,
     },
 
     fontWeight: {
@@ -48,8 +48,8 @@ export const designTokens: MySystem = {
       medium: 500,
       bold: 700, // Useful to set here when bold webfonts come as 400 font-weight.
       heavy: 900,
-      headings: 'bold' // instead of browser default, bold
-    }
+      headings: 'bold', // instead of browser default, bold
+    },
   },
 
   colors: {
@@ -57,8 +57,8 @@ export const designTokens: MySystem = {
 
     brand: {
       primary,
-      secondary
-    }
+      secondary,
+    },
   },
 
   breakpoints: {
@@ -66,35 +66,35 @@ export const designTokens: MySystem = {
     s: '768px',
     m: '992px',
     l: '1400px',
-    xl: '1600px'
+    xl: '1600px',
   },
 
   zIndex: {
     low: 10,
     mid: 100,
-    high: 1000
+    high: 1000,
   },
 
   spacing: {
     baseline: 20,
-    scale
+    scale,
   },
 
   layout: {
     gutter: 20,
     maxWidth: 1200,
     grid: {
-      columnCount: 12
-    }
+      columnCount: 12,
+    },
   },
 
   motion: {
     defaultTransition: `all ${motion.duration} ${motion.easing}`,
     duration: motion.duration,
-    easing: motion.easing
+    easing: motion.easing,
   },
 
-  borderRadius: '3px'
+  borderRadius: '3px',
 }
 
 // Export the tokens

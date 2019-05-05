@@ -5,6 +5,12 @@
 
 This is a boilerplate for you to create your own design system in React. It has everything setup to allow you to focus on what it is you care about: creating awesome, reusable components.
 
+## Code
+
+### Anatomy of a component
+
+File/Folder structure etc
+
 ## Tools
 
 - React
@@ -38,6 +44,8 @@ Playroom allows you to simultaneously design across a variety of themes and scre
 ## Build
 
 TBC
+
+e.g. How to create your own grouped set of components
 
 ## Tooling
 

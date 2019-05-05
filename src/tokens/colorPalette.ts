@@ -11,17 +11,17 @@ export const secondary = '#00AFCE'
 export const tertiary = '#007C98'
 export const quatenary = '#16385C'
 
-export default {
+export const colorPalette = {
   text: {
-    base: '#333333'
+    base: '#333333',
   },
 
   background: {
-    base: '#FFFFFF'
+    base: '#FFFFFF',
   },
 
   link: {
     base: tertiary,
-    over: '#005E73'
-  }
+    over: '#005E73',
+  },
 }
