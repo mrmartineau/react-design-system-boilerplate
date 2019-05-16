@@ -1,20 +1,35 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+##############
+# Build
+build
+
+## Build groups
+buttons.js
+buttons.js.map
+tokens.js
+tokens.js.map
+
+
+##############
 # Dependencies
 node_modules
 
-# Build / dist
-build
-.rpt2_cache
-
+##############
 # Yalc
+# Work with yarn/npm packages locally like a boss
+# https://github.com/whitecolor/yalc
 .yalc
 yalc.lock
 
+##############
 # Tests
 coverage
+test-results
 
-# misc
+##############
+# Misc
+.rpt2_cache
 .DS_Store
 .env.local
 .env.development.local
@@ -25,6 +40,3 @@ yarn-debug.log*
 yarn-error.log*
 .vscode
 .idea
-
-# Jest TestComponent Results
-test-results

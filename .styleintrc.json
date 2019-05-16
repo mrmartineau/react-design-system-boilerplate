@@ -8,7 +8,6 @@
     "no-descending-specificity": null,
     "block-no-empty": null,
     "selector-type-case": null,
-    "block-no-empty": null,
     "selector-type-no-unknown": null,
     "declaration-colon-newline-after": null,
     "value-list-max-empty-lines": null,

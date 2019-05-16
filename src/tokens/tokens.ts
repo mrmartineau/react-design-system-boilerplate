@@ -94,7 +94,7 @@ export const designTokens: MySystem = {
     easing: motion.easing,
   },
 
-  borderRadius: '3px',
+  radii: '3px',
 }
 
 // Export the tokens

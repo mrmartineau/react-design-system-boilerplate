@@ -1,12 +1,16 @@
 import styled from 'styled-components'
-import { space, SpaceProps } from 'styled-system'
+import { space, SpaceProps, color, ColorProps } from 'styled-system'
+import { tokens } from '../../tokens'
 
-export const Button = styled.button<SpaceProps>`
+interface ButtonProps extends SpaceProps, ColorProps {}
+
+export const Button = styled.button<ButtonProps>`
   background-color: #fff;
   border: 1px solid #ddd;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 0.5em;
+  border-radius: ${tokens.get('radii')};
   padding: 0.3em 1em;
   ${space};
+  ${color};
 `

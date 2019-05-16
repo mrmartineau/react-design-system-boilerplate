@@ -1,9 +1,12 @@
-<h1 align="center">
-  <div style="font-size:68px;">🎨</div>
-  React Design System Boilerplate
-</h1>
+<div align="center">
+  <h1>
+    <div style="font-size:68px;">🎨</div>
+    React Design System Boilerplate
+  </h1>
+  <p>This is a boilerplate for you to create your own design system in React. It has everything setup to allow you to focus on what it is you care about: creating awesome, reusable components.</p>
+</div>
 
-This is a boilerplate for you to create your own design system in React. It has everything setup to allow you to focus on what it is you care about: creating awesome, reusable components.
+<hr />
 
 ## Code
 
@@ -57,8 +60,8 @@ The boilerplate uses various tools to ensure better code quality. Defaults have 
 - Husky
 - lint-staged
 
-## Licence
+## License
 
-MIT
+[MIT](https://choosealicense.com/licenses/mit/)
 
 > Made by [ZΛNDΞR ⚡](https://github.com/mrmartineau/)

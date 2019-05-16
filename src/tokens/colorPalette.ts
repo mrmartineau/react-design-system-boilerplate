@@ -19,9 +19,4 @@ export const colorPalette = {
   background: {
     base: '#FFFFFF',
   },
-
-  link: {
-    base: tertiary,
-    over: '#005E73',
-  },
 }

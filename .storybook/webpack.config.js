@@ -10,11 +10,11 @@ module.exports = ({ config }) => {
           'react-app',
           {
             flow: false,
-            typescript: true
-          }
-        ]
-      ]
-    }
+            typescript: true,
+          },
+        ],
+      ],
+    },
   })
 
   config.module.rules.push({
@@ -22,16 +22,16 @@ module.exports = ({ config }) => {
     loaders: [
       {
         loader: require.resolve('@storybook/addon-storysource/loader'),
-        options: { parser: 'typescript' }
-      }
+        options: { parser: 'typescript' },
+      },
     ],
-    enforce: 'pre'
+    enforce: 'pre',
   })
 
   config.resolve.extensions.push('.ts', '.tsx')
 
-  console.log(config.resolve.alias)
-  delete config.resolve.alias['core-js']
+  // console.log(config.resolve.alias)
+  // delete config.resolve.alias['core-js']
 
   return config
 }
