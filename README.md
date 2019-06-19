@@ -82,7 +82,7 @@ Any file with `*.story.tsx` or `*.stories.tsx` can be used by Storybook.
 
 E.g. A `Button` found in the `/src/components` directory.
 
-```
+```js
 .
 ├── Button.tsx // < component code
 ├── README.md // < component documentation
@@ -98,6 +98,16 @@ E.g. A `Button` found in the `/src/components` directory.
 Design tokens are an important part of any design system, so this repo has been setup with 2 ways for your components to make use of these tokens: design-system-utils and Styled System.
 
 All design tokens-related files can be found in the `src/tokens` directory.
+
+```js
+.
+├── colorPalette.ts
+├── index.ts
+├── styledSystemTheme.ts
+├── tokens.models.ts
+├── tokens.stories.ts
+└── tokens.ts
+```
 
 #### Using design-system-utils
 

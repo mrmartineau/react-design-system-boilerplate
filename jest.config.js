@@ -10,6 +10,6 @@ module.exports = {
   setupFilesAfterEnv: [
     'jest-styled-components',
     'jest-dom/extend-expect',
-    'react-testing-library/cleanup-after-each'
+    '@testing-library/react/cleanup-after-each'
   ]
 }
