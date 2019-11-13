@@ -1,17 +1,5 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": false,
-        "targets": "> 0.25%, not dead, IE 11",
-        "debug": false,
-        "useBuiltIns": "usage",
-        "corejs": 3
-      }
-    ],
-    "@babel/preset-react"
-  ],
+  "presets": ["@babel/preset-typescript", "@babel/preset-react"],
   "plugins": [
     [
       "babel-plugin-styled-components",
@@ -21,13 +9,7 @@
     ],
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread",
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "regenerator": true
-      }
-    ]
+    "@babel/plugin-proposal-object-rest-spread"
   ],
   "env": {
     "production": {
@@ -41,15 +23,7 @@
       ]
     },
     "test": {
-      "presets": [
-        "@babel/preset-typescript",
-        [
-          "@babel/preset-env",
-          {
-            "modules": "commonjs"
-          }
-        ]
-      ]
+      "presets": ["@babel/preset-typescript"]
     }
   }
 }
