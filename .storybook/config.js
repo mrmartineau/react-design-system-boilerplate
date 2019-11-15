@@ -1,28 +1,29 @@
 import { configure, addDecorator } from '@storybook/react'
 import { getStorybook, addParameters } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import { theme } from '../src/tokens/styledSystemTheme'
+import { ThemeProvider } from 'theme-ui'
+import { theme } from '../src/tokens/themeUiTheme'
 
 addParameters({
   theme: {
     brandTitle: 'React Design System',
-    brandUrl: 'https://github.com/mrmartineau/react-design-system'
+    brandUrl: 'https://github.com/mrmartineau/react-design-system',
   },
   backgrounds: [
     { name: 'Transparent', value: 'transparent', default: true },
-    { name: 'Grey', value: '#444' }
-  ]
+    { name: 'Grey', value: '#444' },
+  ],
 })
-
-const req = require.context('../src/', true, /stor(ies|y)\.(tsx|ts|js)$/)
-
-function loadStories() {
-  require('../src/info.story')
-  req.keys().forEach(req)
-}
-
+addDecorator(withKnobs)
 addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
 
-configure(loadStories, module)
+configure(
+  [
+    // require('../src/info.story'),
+    require.context('../src/', true, /stor(ies|y)\.(tsx|ts|js|mdx)$/),
+  ],
+  module
+)
+
 export { getStorybook }

@@ -183,7 +183,7 @@ Here are some usage examples of this component:
 ## Build scripts and commands
 
 - `yarn build`: Compile a production build with [Rollup](https://rollupjs.org/)
-- `yarn watch`: Compile/watch with Rollup. This is useful in conjuction with `yarn link`.
+- `yarn watch`: Compile/watch with Rollup. This is useful in conjunction with `yarn link`.
 - `yarn storybook`: Run Storybook development environment
 - `yarn playroom`: Run Playroom
 - `yarn format`: Format all JS with [Prettier](https://prettier.io)
@@ -199,7 +199,7 @@ Here are some usage examples of this component:
 
 ## Tooling
 
-The boilerplate uses various tools to ensure better code quality. Defaults have been set for linting and code style, but can easily be overriden according to your needs.
+The boilerplate uses various tools to ensure better code quality. Defaults have been set for linting and code style, but can easily be overridden according to your needs.
 
 - Prettier
 - Eslint

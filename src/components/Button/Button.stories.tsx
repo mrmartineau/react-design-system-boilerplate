@@ -1,27 +1,37 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { withKnobs, text } from '@storybook/addon-knobs'
-import { doc } from 'storybook-readme'
-import README from './README.md'
-import { Button } from './Button'
+import { select } from '@storybook/addon-knobs'
+// import { Button } from './Button'
+import { Button } from '@theme-ui/components'
+// import { doc } from 'storybook-readme'
+// import README from './README.md'
 
-storiesOf('Button', module)
-  .addDecorator(withKnobs)
-  .add('README', doc(README))
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>{text('text', 'Click me')}</Button>
-  ))
-  .add('with spacing', () => (
-    <Button onClick={action('clicked')} m={3}>
-      {text('text', 'Click me')}
-    </Button>
-  ))
-  .add('with color', () => (
-    <Button onClick={action('clicked')} color="red">
-      {text('text', 'Click me')}
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
-  ))
+const label = 'Variant'
+const options = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+}
+
+export default {
+  title: 'Button',
+  component: Button,
+}
+
+// export const readme = () => doc(README)
+export const primary = () => (
+  <Button
+    onClick={action('clicked')}
+    variant={select(label, options, 'primary')}
+  >
+    Primary
+  </Button>
+)
+
+export const secondary = () => (
+  <Button
+    onClick={action('clicked')}
+    variant={select(label, options, 'secondary')}
+  >
+    Secondary
+  </Button>
+)
