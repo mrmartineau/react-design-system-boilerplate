@@ -1,29 +1,24 @@
 {
   "presets": ["@babel/preset-typescript", "@babel/preset-react"],
   "plugins": [
-    [
-      "babel-plugin-styled-components",
-      {
-        "displayName": true
-      }
-    ],
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread"
+    "@babel/plugin-proposal-object-rest-spread",
+    "emotion"
   ],
   "env": {
-    "production": {
-      "plugins": [
+    "test": {
+      "presets": [
+        "@babel/preset-typescript",
         [
-          "babel-plugin-styled-components",
+          "@babel/preset-env",
           {
-            "displayName": false
+            "targets": {
+              "node": "current"
+            }
           }
         ]
       ]
-    },
-    "test": {
-      "presets": ["@babel/preset-typescript"]
     }
   }
 }
