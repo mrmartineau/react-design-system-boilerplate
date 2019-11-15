@@ -6,7 +6,7 @@ exports[`Given a Button component should render a Button 1`] = `
   border: 1px solid #ddd;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 0.5em;
+  border-radius: 3px;
   padding: 0.3em 1em;
 }
 
