@@ -20,26 +20,31 @@ $ git clone https://github.com/mrmartineau/react-design-system-starter.git
 $ cd react-design-system-starter
 
 # Install dependencies
-$ npm install
+$ yarn install
 
 # That's it! 🎉
 ```
 
-## Tools and technologies used in this package
+## Core tools and technologies
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Styled components 💅](https://www.styled-components.com/) (can easily be swapped with another CSS-in-JS) library
+- Components
+  - [Theme UI](https://theme-ui.com/) - Build consistent, themeable React apps based on constraint-based design principles
+  - [Emotion](https://emotion.sh/) - CSS-in-JS library used by Theme UI
   - [design-system-utils 👩‍🎨](https://github.com/mrmartineau/design-system-utils) - Easy access to your design tokens
-  - [Styled System](https://styled-system.com/)
-- [Storybook](https://storybook.js.org/) - Storybook is an open source tool for developing UI components in isolation for React. It makes building stunning UIs organized and efficient.
-- [Playroom](https://github.com/seek-oss/playroom) - Playroom allows you to simultaneously design across a variety of themes and screen sizes, powered by JSX and your own component library.
-- [Jest](https://jestjs.io/) - testing framework
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- [Rollup](https://rollupjs.org/) - module bundler
+- Component sandboxes
+  - [Storybook](https://storybook.js.org/) - Storybook is a tool for developing UI components in isolation. It makes building stunning UIs organized and efficient.
+  - [Playroom](https://github.com/seek-oss/playroom) - Playroom allows you to simultaneously design across a variety of themes and screen sizes, powered by JSX and your own component library.
+- Testing
+  - [Jest](https://jestjs.io/) - testing framework
+  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- Compilation/Bundling
+  - [Preconstruct](https://preconstruct.tools/) - Module bundler based on Rollup and various other technologies
   - [Babel](https://babeljs.io/)
-- [ESLint](https://eslint.org/)
-- [Stylelint](https://stylelint.io)
+- Linting
+  - [ESLint](https://eslint.org/)
+  - [Stylelint](https://stylelint.io)
 
 ## Code
 
@@ -50,7 +55,6 @@ This is a basic view of the project's directory. All React components are locate
 ├── build // the directory for compiled files
 ├── jest.config.js
 ├── playroom.config.js
-├── rollup.config.js // build config
 ├── src
 │   ├── buttons.ts // an example entry file for a subset of
 │   ├── components
@@ -66,7 +70,7 @@ This is a basic view of the project's directory. All React components are locate
 │   └── tokens
 │       ├── colorPalette.ts
 │       ├── index.ts
-│       ├── styledSystemTheme.ts
+│       ├── themeUiTheme.ts
 │       ├── tokens.models.ts
 │       ├── tokens.stories.ts
 │       └── tokens.ts
@@ -80,7 +84,7 @@ Any file with `*.story.tsx` or `*.stories.tsx` can be used by Storybook.
 
 ### Anatomy of a component directory
 
-E.g. A `Button` found in the `/src/components` directory.
+E.g. a `Button` found in the `/src/components` directory.
 
 ```js
 .
@@ -103,7 +107,7 @@ All design tokens-related files can be found in the `src/tokens` directory.
 .
 ├── colorPalette.ts
 ├── index.ts
-├── styledSystemTheme.ts
+├── themeUiTheme.ts
 ├── tokens.models.ts
 ├── tokens.stories.ts
 └── tokens.ts
@@ -113,7 +117,7 @@ All design tokens-related files can be found in the `src/tokens` directory.
 
 [design-system-utils 👩‍🎨](https://github.com/mrmartineau/design-system-utils) has already setup with this design system. It makes it really easy to store your design tokens in an organised way and reference them in your components.
 
-**[`src/tokens/tokens.ts`](https://github.com/mrmartineau/react-design-system-starter/blob/master/src/tokens/tokens.ts)** is the entry point used with design-system-utils. Please read the design-system-utils docs to find out all about this very useful library, or see below for a few simple examples:
+[`src/tokens/tokens.ts`](https://github.com/mrmartineau/react-design-system-starter/blob/master/src/tokens/tokens.ts) is the entry point used with design-system-utils. Please read the [design-system-utils docs](https://github.com/mrmartineau/design-system-utils) to find out all about this very useful library, or see below for a few simple examples:
 
 ```js
 import styled from 'styled-components'
@@ -135,8 +139,8 @@ Styled System's theme object is slightly different from design-system-utils' the
 
 ```jsx
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import theme from './styledSystemTheme'
+import { ThemeProvider } from 'theme-ui'
+import { theme } from '../src/tokens/themeUiTheme'
 
 export default props => (
   <ThemeProvider theme={theme}>{/* application elements */}</ThemeProvider>
@@ -168,12 +172,19 @@ Here are some usage examples of this component:
 
 ```jsx
 <div>
-  <Button onClick={} m={3}>Click me</Button>
-  <Button onClick={} color="red">Click me</Button>
+  <Button onClick={} m={3}>
+    Click me
+  </Button>
+  <Button onClick={} color="red">
+    Click me
+  </Button>
 </div>
 ```
 
-- how the tokens can drive styled-system
+Docs TODO:
+
+- how the tokens can drive theme-ui `theme`
+- examples for how to create new entrypoints
 
 ## Build and compilation
 
@@ -215,4 +226,4 @@ There is a pre-build script that is be run by npm when you publish (`npm run pre
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-> Made by [ZΛNDΞR ⚡](https://github.com/mrmartineau/)
+> Made by [Zander ⚡](https://github.com/mrmartineau/)
