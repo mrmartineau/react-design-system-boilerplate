@@ -30,7 +30,7 @@
     "lint:js": "eslint \"./src/**/*.{ts,tsx}\"",
     "lint:css": "stylelint './src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.*\" \"*.md\"",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist buttons/dist tokens/dist",
     "type-check": "tsc --noEmit",
     "prebuild": "yarn clean",
     "build": "cross-env NODE_ENV=production yarn preconstruct build",
@@ -38,7 +38,8 @@
   },
   "preconstruct": {
     "entrypoints": [
-      "."
+      ".",
+      "./buttons"
     ]
   },
   "dependencies": {

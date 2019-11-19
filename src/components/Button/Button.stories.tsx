@@ -1,8 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { select } from '@storybook/addon-knobs'
-// import { Button } from './Button'
-import { Button } from '@theme-ui/components'
+import { Button } from './Button'
 // import mdx from './Button.mdx'
 
 const label = 'Variant'
@@ -46,6 +45,10 @@ export const secondary = () => (
   </Button>
 )
 
+/**
+ * Spacey button
+ * Has more  space than the rest
+ */
 export const spacey = () => (
   <Button
     onClick={action('clicked')}

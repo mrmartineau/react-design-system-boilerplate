@@ -1,0 +1,11 @@
+{
+  "main": "dist/react-design-system-starter-kit.cjs.js",
+  "module": "dist/react-design-system-starter-kit.esm.js",
+  "browser": {
+    "./dist/react-design-system-starter-kit.cjs.js": "./dist/react-design-system-starter-kit.browser.cjs.js",
+    "./dist/react-design-system-starter-kit.esm.js": "./dist/react-design-system-starter-kit.browser.esm.js"
+  },
+  "preconstruct": {
+    "source": "../src/buttons"
+  }
+}
