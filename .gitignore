@@ -2,7 +2,7 @@
 
 ##############
 # Build
-build
+dist
 
 ## Build groups
 buttons.js

@@ -1,27 +1,60 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { withKnobs, text } from '@storybook/addon-knobs'
-import { doc } from 'storybook-readme'
-import README from './README.md'
+import { select } from '@storybook/addon-knobs'
 import { Button } from './Button'
+// import mdx from './Button.mdx'
 
-storiesOf('Button', module)
-  .addDecorator(withKnobs)
-  .add('README', doc(README))
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>{text('text', 'Click me')}</Button>
-  ))
-  .add('with spacing', () => (
-    <Button onClick={action('clicked')} m={3}>
-      {text('text', 'Click me')}
-    </Button>
-  ))
-  .add('with color', () => (
-    <Button onClick={action('clicked')} color="red">
-      {text('text', 'Click me')}
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
-  ))
+const label = 'Variant'
+const options = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+}
+
+export default {
+  title: 'Components|Button',
+  component: Button,
+  parameters: {
+    componentSubtitle: 'Handy status label',
+    // docs: {
+    //   page: mdx,
+    // },
+  },
+}
+
+/**
+ * Primary button
+ */
+export const primary = () => (
+  <Button
+    onClick={action('clicked')}
+    variant={select(label, options, 'primary')}
+  >
+    Primary
+  </Button>
+)
+
+/**
+ * Secondary button
+ */
+export const secondary = () => (
+  <Button
+    onClick={action('clicked')}
+    variant={select(label, options, 'secondary')}
+  >
+    Secondary
+  </Button>
+)
+
+/**
+ * Spacey button
+ * Has more  space than the rest
+ */
+export const spacey = () => (
+  <Button
+    onClick={action('clicked')}
+    variant={select(label, options, 'primary')}
+    m={5}
+  >
+    Secondary
+  </Button>
+)
