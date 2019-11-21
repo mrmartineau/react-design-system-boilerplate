@@ -8,6 +8,7 @@ const label = 'Variant'
 const options = {
   Primary: 'primary',
   Secondary: 'secondary',
+  Muted: 'muted',
 }
 
 export default {

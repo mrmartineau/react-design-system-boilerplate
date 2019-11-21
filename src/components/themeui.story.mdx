@@ -1,0 +1,118 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Box, Flex, Grid, Heading, Button } from '@theme-ui/components'
+
+<Meta title="Theme UI|Components" />
+
+# Theme UI components
+
+These components are not bundled with the boilerplate, they are optional dependencies for your design system and application
+
+Find out about them all [here](https://theme-ui.com/components)
+
+### Example
+
+```jsx
+<Box
+  p={4}
+  bg='highlight'>
+  <Flex
+    sx={{
+      alignItems: 'center',
+    }}>
+    <Heading>
+      Components
+    </Heading>
+    <Button ml='auto'>
+      Beep
+    </Button>
+  </Flex>
+</Box>
+```
+
+# Box
+
+Use the Box component as a layout primitive to add margin, padding, and colors to content.
+
+https://theme-ui.com/components/box
+
+<Preview>
+  <Story name="Box">
+    <Box px={4} py={3} color="white" bg="secondary">
+      Box
+    </Box>
+  </Story>
+</Preview>
+
+```jsx
+<Box p={4} color="white" bg="secondary">
+  Box
+</Box>
+```
+
+```js
+import { Box } from '@theme-ui/components'
+```
+
+# Flex
+
+Use the Flex component to create flexbox layouts.
+
+https://theme-ui.com/components/flex
+
+<Preview>
+  <Story name="Flex">
+    <Flex>
+  <Box p={2} bg="primary" sx={{ flex: '1 1 auto' }}>
+    Flex
+  </Box>
+  <Box p={2} bg="muted">
+    Box
+  </Box>
+</Flex>
+  </Story>
+</Preview>
+
+```jsx
+<Flex>
+  <Box p={2} bg="primary" sx={{ flex: '1 1 auto' }}>
+    Flex
+  </Box>
+  <Box p={2} bg="secondary">
+    Box
+  </Box>
+</Flex>
+```
+
+```js
+import { Flex } from '@theme-ui/components'
+```
+
+# Grid
+
+CSS grid layout component to arrange direct child elements in a tiled grid layout.
+
+https://theme-ui.com/components/grid
+
+<Preview>
+  <Story name="Grid">
+    <Grid width={[128, null, 192]}>
+    <Box bg="primary" p={1}>Box</Box>
+    <Box bg="muted" p={1}>Box</Box>
+    <Box bg="primary" p={1}>Box</Box>
+    <Box bg="secondary" p={1}>Box</Box>
+  </Grid>
+  </Story>
+</Preview>
+
+```js
+import { Grid } from '@theme-ui/components'
+```
+
+```jsx
+<Grid width={[128, null, 192]}>
+  <Box bg="primary" p={1}>Box</Box>
+  <Box bg="muted" p={1}>Box</Box>
+  <Box bg="primary" p={1}>Box</Box>
+  <Box bg="secondary" color={white} p={1}>Box</Box>
+</Grid>
+```

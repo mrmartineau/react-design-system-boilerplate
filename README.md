@@ -14,6 +14,28 @@ Docs TODO:
 
 ---
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [How To Use](#how-to-use)
+- [Core tools and technologies](#core-tools-and-technologies)
+- [Overview of your design system](#overview-of-your-design-system)
+  - [Understanding Theme UI](#understanding-theme-ui)
+    - [Create your theme](#create-your-theme)
+    - [Style your UI](#style-your-ui)
+  - [Theme UI components](#theme-ui-components)
+  - [Design tokens and theming](#design-tokens-and-theming)
+    - [Using design-system-utils](#using-design-system-utils)
+- [Code](#code)
+  - [Anatomy of a component directory](#anatomy-of-a-component-directory)
+- [Build and compilation](#build-and-compilation)
+- [Build scripts and commands](#build-scripts-and-commands)
+- [Tooling](#tooling)
+- [Publishing your package to npm](#publishing-your-package-to-npm)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
