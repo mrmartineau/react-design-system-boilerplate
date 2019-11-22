@@ -2,7 +2,6 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { select } from '@storybook/addon-knobs'
 import { Button } from './Button'
-// import mdx from './Button.mdx'
 
 const label = 'Variant'
 const options = {
@@ -14,22 +13,13 @@ const options = {
 export default {
   title: 'Components|Button',
   component: Button,
-  parameters: {
-    componentSubtitle: 'Handy status label',
-    // docs: {
-    //   page: mdx,
-    // },
-  },
 }
 
 /**
  * Primary button
  */
 export const primary = () => (
-  <Button
-    onClick={action('clicked')}
-    variant={select(label, options, 'primary')}
-  >
+  <Button onClick={action('clicked')} variant="primary">
     Primary
   </Button>
 )
@@ -38,10 +28,7 @@ export const primary = () => (
  * Secondary button
  */
 export const secondary = () => (
-  <Button
-    onClick={action('clicked')}
-    variant={select(label, options, 'secondary')}
-  >
+  <Button onClick={action('clicked')} variant="secondary">
     Secondary
   </Button>
 )
@@ -56,6 +43,6 @@ export const spacey = () => (
     variant={select(label, options, 'primary')}
     m={5}
   >
-    Secondary
+    Spacey
   </Button>
 )

@@ -22,6 +22,7 @@ addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
 
 configure(
   [
+    require.context('../src/', true, /intro.story.mdx/),
     require.context('../src/', true, /stor(ies|y)\.mdx$/),
     require.context('../src/', true, /stor(ies|y)\.(tsx|ts|js)$/),
   ],

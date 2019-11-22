@@ -1,7 +1,25 @@
 import { Meta, Story, Preview, Anchor } from '@storybook/addon-docs/blocks'
-import { Box, Flex, Grid, Heading, Button } from '@theme-ui/components'
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Button,
+  Image,
+  Badge,
+  Text,
+  Label,
+  Input,
+  Select,
+  Textarea,
+  Radio,
+  Checkbox,
+  Slider,
+} from '@theme-ui/components'
 
 <Meta title="Theme UI|Components" />
+
+---
 
 <Anchor storyId="theme-ui-components--box" />
 
@@ -98,11 +116,11 @@ https://theme-ui.com/components/grid
 <Preview>
   <Story name="Grid">
     <Grid width={[128, null, 192]}>
-    <Box bg="primary" p={1}>Box</Box>
-    <Box bg="muted" p={1}>Box</Box>
-    <Box bg="primary" p={1}>Box</Box>
-    <Box bg="secondary" p={1}>Box</Box>
-  </Grid>
+      <Box bg="primary" p={1}>Box</Box>
+      <Box bg="muted" p={1}>Box</Box>
+      <Box bg="primary" p={1}>Box</Box>
+      <Box bg="secondary" p={1}>Box</Box>
+    </Grid>
   </Story>
 </Preview>
 
@@ -118,3 +136,121 @@ import { Grid } from '@theme-ui/components'
   <Box bg="secondary" color={white} p={1}>Box</Box>
 </Grid>
 ```
+
+<Anchor storyId="theme-ui-components--card-example" />
+
+# Examples
+
+All the examples below use out-of-the-box Theme UI components. They all adapt to the current theme and are easily composable. None of these components are included with this design system.
+
+## Card example
+
+Adapted from the [Chakra UI homepage](https://chakra-ui.com/) example
+
+<Preview>
+  <Story name="Card example">
+    <Box
+      sx={{
+        border: '1px solid #ddd',
+        borderRadius: 10,
+        p: 3,
+        maxWidth: 400,
+      }}
+    >
+      <Image src="https://bit.ly/2k1H1t6" sx={{borderRadius: '5px'}}/>
+      <Flex sx={{ alignItems: 'center' }} mt={2}>
+        <Badge variant="secondary" mr={2}>Plus</Badge>
+        <Text
+          sx={{
+            textTransform: "uppercase",
+            fontSize: 1,
+            fontWeight: "bold",
+            color: "primary",
+          }}
+        >
+        Verified &bull; Cape Town
+        </Text>
+      </Flex>
+      <Text
+        sx={{
+          mt: 2,
+          fontSize: 2,
+          fontWeight: "semibold",
+        }}
+      >
+        Modern, Chic Penthouse with Mountain, City & Sea Views
+      </Text>
+      <Text mt={2}>$119/night</Text>
+      <Flex mt={2} sx={{alignItems: 'center'}}>
+        ⭐
+        <Text sx={{
+          fontSize: 2,
+        }}>
+          <b>4.84</b> (190)
+        </Text>
+      </Flex>
+    </Box>
+  </Story>
+</Preview>
+
+---
+
+<Anchor storyId="theme-ui-components--form-example" />
+
+## Form example
+
+<Preview>
+  <Story name="Form example">
+    <Box
+      as='form'
+      onSubmit={e => e.preventDefault()}>
+      <Label htmlFor='username'>Username</Label>
+      <Input
+        name='username'
+        mb={3}
+      />
+      <Label htmlFor='password'>Password</Label>
+      <Input
+        type='password'
+        name='password'
+        mb={3}
+      />
+      <Box>
+        <Label mb={3}>
+          <Checkbox />
+          Remember me
+        </Label>
+      </Box>
+      <Label htmlFor='sound'>Sound</Label>
+      <Select name='sound' mb={3}>
+        <option>Beep</option>
+        <option>Boop</option>
+        <option>Blip</option>
+      </Select>
+      <Label htmlFor='comment'>Comment</Label>
+      <Textarea
+        name='comment'
+        rows='6'
+        mb={3}
+      />
+      <Flex mb={3}>
+        <Label>
+          <Radio name='letter' /> Alpha
+        </Label>
+        <Label>
+          <Radio name='letter' /> Bravo
+        </Label>
+        <Label>
+          <Radio name='letter' /> Charlie
+        </Label>
+      </Flex>
+      <Label>
+        Slider
+      </Label>
+      <Slider mb={3} />
+      <Button>
+        Submit
+      </Button>
+    </Box>
+  </Story>
+</Preview>

@@ -1,183 +1,128 @@
 import { Theme } from 'theme-ui'
 
-const heading = {
-  fontFamily: 'heading',
-  fontWeight: 'heading',
-  lineHeight: 'heading',
-}
-
 export const theme: Theme = {
-  colors: {
-    text: 'hsl(10, 20%, 20%)',
-    background: 'hsl(10, 10%, 98%)',
-    primary: 'hsl(10, 80%, 50%)',
-    secondary: 'hsl(10, 60%, 50%)',
-    highlight: 'hsl(10, 40%, 90%)',
-    purple: 'hsl(250, 60%, 30%)',
-    muted: 'hsl(10, 20%, 94%)',
-    gray: 'hsl(10, 20%, 50%)',
-  },
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: 'system-ui, sans-serif',
-    heading: 'inherit',
+    heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  fontSizes: [12, 14, 16, 24, 32, 48, 64, 96, 128],
   fontWeights: {
     body: 400,
     heading: 700,
-    display: 900,
+    bold: 700,
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.88,
     heading: 1.25,
   },
-  textStyles: {
-    heading,
-    display: {
-      variant: 'textStyles.heading',
-      fontSize: [5, 6],
-      fontWeight: 'display',
-      letterSpacing: '-0.03em',
-      mt: 3,
+  colors: {
+    text: '#223634',
+    background: '#FAFFFD',
+    primary: '#009B7F',
+    secondary: '#DF6800',
+    accent: '#609',
+    muted: '#EBE3D6',
+  },
+  radii: [0, 4, 8, 16, 20, 50],
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'text',
+      },
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
     },
   },
   styles: {
-    Container: {
-      p: 3,
-      maxWidth: 1024,
-    },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
     },
     h1: {
-      variant: 'textStyles.display',
-    },
-    h2: {
-      variant: 'textStyles.heading',
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
       fontSize: 5,
     },
-    h3: {
-      variant: 'textStyles.heading',
+    h2: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
       fontSize: 4,
     },
-    h4: {
-      variant: 'textStyles.heading',
+    h3: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
       fontSize: 3,
     },
-    h5: {
-      variant: 'textStyles.heading',
+    h4: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
       fontSize: 2,
     },
-    h6: {
-      variant: 'textStyles.heading',
+    h5: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
       fontSize: 1,
+    },
+    h6: {
+      color: 'text',
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 0,
+    },
+    p: {
+      color: 'text',
+      fontFamily: 'body',
+      fontWeight: 'body',
+      lineHeight: 'body',
     },
     a: {
       color: 'primary',
-      '&:hover': {
-        color: 'secondary',
-      },
     },
+
     pre: {
-      variant: 'prism',
       fontFamily: 'monospace',
-      fontSize: 1,
-      p: 3,
-      color: 'text',
-      bg: 'muted',
-      overflow: 'auto',
+      overflowX: 'auto',
       code: {
         color: 'inherit',
       },
     },
     code: {
       fontFamily: 'monospace',
-      color: 'secondary',
-      fontSize: 1,
-    },
-    inlineCode: {
-      fontFamily: 'monospace',
-      color: 'secondary',
-      bg: 'muted',
+      fontSize: 'inherit',
     },
     table: {
       width: '100%',
-      my: 4,
       borderCollapse: 'separate',
       borderSpacing: 0,
-      [['th', 'td']]: {
-        textAlign: 'left',
-        py: '4px',
-        pr: '4px',
-        pl: 0,
-        borderColor: 'muted',
-        borderBottomStyle: 'solid',
-      },
     },
     th: {
-      verticalAlign: 'bottom',
-      borderBottomWidth: '2px',
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
     },
     td: {
-      verticalAlign: 'top',
-      borderBottomWidth: '1px',
-    },
-    hr: {
-      border: 0,
-      borderBottom: '1px solid',
-      borderColor: 'muted',
+      textAlign: 'left',
+      borderBottomStyle: 'solid',
     },
     img: {
       maxWidth: '100%',
-    },
-  },
-  prism: {
-    [[
-      '.comment',
-      '.prolog',
-      '.doctype',
-      '.cdata',
-      '.punctuation',
-      '.operator',
-      '.entity',
-      '.url',
-    ]]: {
-      color: 'gray',
-    },
-    '.comment': {
-      fontStyle: 'italic',
-    },
-    [[
-      '.property',
-      '.tag',
-      '.boolean',
-      '.number',
-      '.constant',
-      '.symbol',
-      '.deleted',
-      '.function',
-      '.class-name',
-      '.regex',
-      '.important',
-      '.variable',
-    ]]: {
-      color: 'purple',
-    },
-    [['.atrule', '.attr-value', '.keyword']]: {
-      color: 'primary',
-    },
-    [[
-      '.selector',
-      '.attr-name',
-      '.string',
-      '.char',
-      '.builtin',
-      '.inserted',
-    ]]: {
-      color: 'secondary',
     },
   },
 }
