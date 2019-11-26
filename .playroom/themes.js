@@ -1,3 +1,3 @@
 module.exports = {
-  main: require('../src/tokens/themeUiTheme'),
+  main: require('../src/tokens/theme'),
 }

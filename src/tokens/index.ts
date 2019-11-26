@@ -1,2 +1,2 @@
 export { tokens } from './tokens'
-export { theme } from './themeUiTheme'
+export { theme } from './theme'

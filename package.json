@@ -39,7 +39,7 @@
   "preconstruct": {
     "entrypoints": [
       ".",
-      "./buttons"
+      "./tokens"
     ]
   },
   "dependencies": {

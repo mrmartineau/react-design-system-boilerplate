@@ -87,7 +87,7 @@ To fully understand Theme UI and all that it provides, please read and understan
 Create a theme object to include custom color, typography, and layout values. Read more about this in the [Theme UI docs](https://theme-ui.com/theming).
 
 ```js
-// example themeUiTheme.js
+// example theme.js
 export const theme = {
   fonts: {
     body: 'system-ui, sans-serif',
@@ -163,7 +163,7 @@ All tokens-related files can be found in the `src/tokens` directory.
 .
 ├── colorPalette.ts
 ├── index.ts
-├── themeUiTheme.ts
+├── theme.ts
 ├── tokens.models.ts
 ├── tokens.stories.ts
 └── tokens.ts
@@ -203,7 +203,7 @@ This is a basic view of the project's directory. All React components are locate
 │   └── tokens
 │       ├── colorPalette.ts
 │       ├── index.ts
-│       ├── themeUiTheme.ts
+│       ├── theme.ts
 │       ├── tokens.models.ts
 │       ├── tokens.stories.ts
 │       └── tokens.ts
