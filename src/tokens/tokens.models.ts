@@ -23,4 +23,5 @@ export interface MySystemSpacing extends SystemSpacing {
 export interface MySystem extends System {
   type: MySystemType
   spacing: MySystemSpacing
+  radii: number[]
 }

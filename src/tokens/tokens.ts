@@ -2,36 +2,54 @@ import { colorPalette, primary, secondary } from './colorPalette'
 import DesignSystem from 'design-system-utils'
 import { MySystem } from './tokens.models'
 
-const fontFamily = {
+export const fontFamily = {
   system:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans"',
   sans: '"Effra","Helvetica Neue", Helvetica, Arial, sans-serif',
   serif: 'Georgia, "Times New Roman", Times, serif',
   mono: 'Menlo, Monaco, "Courier New", monospace',
 }
-
-const motion = {
+export const motion = {
   duration: '300ms',
   easing: 'cubic-bezier(0.77, 0, 0.175, 1)',
 }
-
+export const breakpoints: { [key: string]: string | number } = {
+  xs: '576px',
+  s: '768px',
+  m: '992px',
+  l: '1400px',
+  xl: '1600px',
+}
 export const scale: number[] = [0, 8, 16, 24, 32, 40, 48, 56, 64]
+export const radii: number[] = [0, 4, 8, 16, 24, 32, 48, 64, 96, 128]
+export const zIndices: { [key: string]: number } = {
+  low: 10,
+  mid: 100,
+  high: 1000,
+}
+export const fontSizes: { [key: string]: string } = {
+  xxs: '12px',
+  xs: '14px',
+  s: '16px', // p
+  m: '18px', // h5
+  l: '24px', // h4
+  xl: '30px', // h3
+  xxl: '40px', // h2
+  xxxl: '48px', // h1
+}
+
+export const convertObjectValuesToUnitlessArray = (object): number[] => {
+  return Object.values(object).map(item => {
+    return parseFloat(item)
+  })
+}
 
 export const designTokens: MySystem = {
   type: {
     baseFontSize: '16px',
 
     // http://www.modularscale.com/?16&px&1.23
-    sizes: {
-      xxs: '12px',
-      xs: '14px',
-      s: '16px', // p
-      m: '18px', // h5
-      l: '24px', // h4
-      xl: '30px', // h3
-      xxl: '40px', // h2
-      xxxl: '48px', // h1
-    },
+    sizes: fontSizes,
 
     fontFamily,
     fontFamilyBase: fontFamily.sans,
@@ -61,19 +79,9 @@ export const designTokens: MySystem = {
     },
   },
 
-  breakpoints: {
-    xs: '576px',
-    s: '768px',
-    m: '992px',
-    l: '1400px',
-    xl: '1600px',
-  },
+  breakpoints,
 
-  zIndex: {
-    low: 10,
-    mid: 100,
-    high: 1000,
-  },
+  zIndex: c,
 
   spacing: {
     baseline: 20,
@@ -94,7 +102,7 @@ export const designTokens: MySystem = {
     easing: motion.easing,
   },
 
-  radii: '3px',
+  radii,
 }
 
 // Export the tokens

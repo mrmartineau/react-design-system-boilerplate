@@ -1,21 +1,22 @@
 import { Theme } from 'theme-ui'
+import { tokens } from './tokens'
 
 export const theme: Theme = {
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: tokens.get('spacing.scale'),
   fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
-    monospace: 'Menlo, monospace',
+    body: tokens.get('type.fontFamily.system'),
+    heading: tokens.get('type.fontFamily.system'),
+    monospace: tokens.get('type.fontFamily.mono'),
   },
   fontSizes: [12, 14, 16, 24, 32, 48, 64, 96, 128],
   fontWeights: {
-    body: 400,
-    heading: 700,
-    bold: 700,
+    body: tokens.get('type.fontWeight.normal'),
+    heading: tokens.get('type.fontWeight.bold'),
+    bold: tokens.get('type.fontWeight.bold'),
   },
   lineHeights: {
-    body: 1.88,
-    heading: 1.25,
+    body: tokens.get('type.lineHeight.base'),
+    heading: tokens.get('type.lineHeight.headings'),
   },
   colors: {
     text: '#223634',
@@ -25,9 +26,10 @@ export const theme: Theme = {
     accent: '#609',
     muted: '#EBE3D6',
   },
-  radii: [0, 4, 8, 16, 20, 50],
+  radii: tokens.get('radii'),
   buttons: {
     primary: {
+      borderRadius: 1,
       color: 'background',
       bg: 'primary',
       '&:hover': {
@@ -35,8 +37,18 @@ export const theme: Theme = {
       },
     },
     secondary: {
-      color: 'background',
+      borderRadius: 2,
+      color: 'backgro und',
       bg: 'secondary',
+    },
+  },
+  forms: {
+    label: {
+      mb: 2,
+      fontWeight: 'bold',
+    },
+    input: {
+      borderRadius: 1,
     },
   },
   styles: {
