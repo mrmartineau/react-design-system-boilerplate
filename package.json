@@ -34,7 +34,8 @@
     "type-check": "tsc --noEmit",
     "prebuild": "yarn clean",
     "build": "cross-env NODE_ENV=production yarn preconstruct build",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "chromatic": "npx chromatic --project-token=f9e606178614"
   },
   "preconstruct": {
     "entrypoints": [
@@ -85,6 +86,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-emotion": "^10.0.23",
     "babel-preset-react-app": "^9.0.2",
+    "chromatic": "^5.10.0-canary.0",
     "cross-env": "^6.0.3",
     "cypress": "^3.3.1",
     "eslint": "^6.6.0",
