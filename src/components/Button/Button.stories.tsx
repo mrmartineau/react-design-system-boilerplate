@@ -20,7 +20,7 @@ export default {
  */
 export const primary = () => (
   <Button onClick={action('clicked')} variant="primary">
-    Primary
+    Primary Button
   </Button>
 )
 
@@ -29,7 +29,7 @@ export const primary = () => (
  */
 export const secondary = () => (
   <Button onClick={action('clicked')} variant="secondary">
-    Secondary
+    Secondary Button
   </Button>
 )
 
@@ -43,6 +43,6 @@ export const spacey = () => (
     variant={select(label, options, 'primary')}
     m={5}
   >
-    Spacey
+    Spacey Button
   </Button>
 )
